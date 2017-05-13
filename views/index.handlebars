@@ -1,47 +1,53 @@
-<h1>Yummy Burger</h1>
+<div class="container">
 
-<h2>You can eat these still</h2>
+  <h1>Hungry Burger</h1>
 
-<ul>
-  {{#each burgers}}
-    {{#unless this.devoured}}
-      <li>
-        {{this.burger_name}}
+  <div class="col-md-4 col-md-offset-1">
+    <div class="devour-div">
+      <h2>You can eat these still</h2>
 
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="true">
-          <button type="submit">Devour!</button>
-        </form>
+      <ul>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            <li class="devour-li well">
+              {{this.burger_name}}
 
- 
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>You already ate these</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if this.devoured}}
-      <li>
-        {{this.burger_name}}
+              <form action="/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="devoured" value="true">
+                <button  class= "btn btn-success" type="submit" id="devour-btn">Devour!</button>
+              </form>
 
        
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-update-form" action="/" method="POST">
-
-  <div class="form-group">
-    <label for="newBurger">Burger Name:</label>
-    <input type="textarea" id="newBurger" name="name">
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
   </div>
+  <div class="col-md-3">
+    <div class="add-burger">      
+      <form class="create-update-form" action="/" method="POST">
+        <h2>Add a Burger</h2>
+        <textarea id="newBurger" name="name">  
+        </textarea>
+        <button class= "btn btn-success" type="submit" id="add-burger-btn">Add Burger</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="eaten-div">
+      <h2>You already ate these</h2>
 
-
-
-  <button type="submit">Add Burger</button>
-</form>
+      <ul>
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <li class="eaten-li well">
+              {{this.burger_name}}
+             
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

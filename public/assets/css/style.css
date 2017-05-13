@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../images/burger.jpg")no-repeat center center fixed;
+    background-size: 100% 100%;
+    text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.well{
+    margin-bottom: 2px;
+    text-align: left;
+    padding: 10px;
+}
+
+h1 {
+    font-style: italic bold;
+    margin-top: 0;
+}
+
+
+.add-burger form{
+	margin-top:20em;
+}
+ul{
+    list-style: none;
+}
+.devour-li form{
+    display: inline-block;
+    position: absolute;
+    right: 18px;
+}
