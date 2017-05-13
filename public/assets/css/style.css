@@ -13,6 +13,7 @@ body {
     margin-bottom: 2px;
     text-align: left;
     padding: 10px;
+    line-height: 30px;
 }
 
 h1 {
@@ -30,5 +31,5 @@ ul{
 .devour-li form{
     display: inline-block;
     position: absolute;
-    right: 18px;
+    right: 24px;
 }
